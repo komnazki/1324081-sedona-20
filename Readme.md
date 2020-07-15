@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [AnastAsia Komnazki](https://up.htmlacademy.ru/adaptive/20/user/1324081).
-* Наставник: [Сергей 🐨 Скубида](https://htmlacademy.ru/profile/id1210299).
+* Наставник: [Сергей Скубида](https://htmlacademy.ru/profile/id1210299).
 
 ---
 
