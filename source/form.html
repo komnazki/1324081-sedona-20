@@ -16,24 +16,16 @@
         <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a href="index.html">
-                  Главная
-                </a>
+                <a href="index.html">Главная</a>
               </li>
               <li class="site-list__item">
-                <a href="photo.html">
-                  Фото и видео
-                </a>
+                <a href="photo.html">Фото и видео</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a>
-                  Форма отзыва
-                </a>
+                <a>Форма отзыва</a>
               </li>
               <li class="site-list__item">
-                <a href="https://htmlacademy.ru/intensive/adaptive">
-                  HTML Academy
-                </a>
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
         </div>
@@ -47,7 +39,50 @@
       <section class="review__wrapper review">
         <h1>Оставьте свой отзыв</h1>
         <p class="review__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностей</p>
-        <form></form>
+        <form class="review__forms" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="review__item review__name">
+            <legend class="review__title">Представьтесь:</legend>
+            <label for="username">Имя*</label>
+            <input type="text" id="username" name="username" placeholder="Петр" autocomplete="on" required>
+            <label for="familyname">Фамилия*</label>
+            <input type="text" id="familyname" name="username" placeholder="Иванов" autocomplete="on" required>
+            <label for="patronymic">Отчество</label>
+            <input type="text" id="patronymic" name="username" placeholder="Александрович" autocomplete="on">
+          </fieldset>
+          <fieldset class="review__item review__contact">
+            <legend class="review__title">Контактная информация:</legend>
+            <label for="phone">Контактный телефон*</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+            <label for="contact-email">Электронная почта*</label>
+            <input type="email" id="contact-email" name="email" placeholder="Введите email" required>
+          </fieldset>
+          <fieldset class="review__item review__impressions">
+            <legend class="review__title">Ваше общее впечатление:</legend>
+              <input type="radio" name="impressions" value="positive" class="impressions__radio" id="yes" checked="">
+              <label for="yes" tabindex="0">Скорее&nbsp;положительное</label>
+              <input type="radio" name="impressions" value="negative" class="impressions__radio" id="no">
+              <label for="no" tabindex="0">Скорее&nbsp;отрицательное</label>
+              <input type="radio" name="impressions" value="zero" class="impressions__radio" id="zero">
+              <label for="zero" tabindex="0">Затрудняюсь&nbsp;ответить</label>
+          </fieldset>
+          <fieldset class="review__item review__showplace">
+            <legend class="review__title">Посещенные достопримечательности:</legend>
+            <input type="checkbox" name="showplace" id="devilsbridge" value="devilsbridge" class="showplace__input" checked="">
+            <label for="devilsbridge">Мост&nbsp;Дьявола</label>
+            <input type="checkbox" name="showplace" id="mountainbell" value="mountainbell" class="showplace__input" checked="">
+            <label for="mountainbell">Гора-Колокол</label>
+            <input type="checkbox" name="showplace" id="slidepark" value="slidepark" class="showplace__input" checked="">
+            <label for="slidepark">Слайд-парк</label>
+            <input type="checkbox" name="showplace" id="redrocks" value="redrocks" class="showplace__input">
+            <label for="redrocks">Красные&nbsp;скалы</label>
+          </fieldset>
+          <fieldset class="review__item review__emotion">
+            <legend class="review__title">Опишите свои эмоции:</legend>
+            <label for="comment" class="visually-hidden">Оставьте комментарий в свободной форме</label>
+            <textarea name="comment" id="comment" rows="4" placeholder="Опишите подробно все свои восторги" required></textarea>
+          </fieldset>
+          <button class="review-button button" type="submit">Отправить отзыв</button>
+        </form>
       </section>
     </main>
 
