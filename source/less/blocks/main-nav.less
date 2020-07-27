@@ -1,0 +1,38 @@
+.main-nav {
+  width: 320px;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.site-list__item {
+  a {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: @font-size-min;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: @color-background-blue;
+    }
+  }
+}
+
+.site-list__item--active {
+  color: #766357;
+
+  &:hover,
+  &:focus {
+    color: #604e43;
+  }
+}
