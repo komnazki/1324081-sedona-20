@@ -1,7 +1,5 @@
 .reasons {
-  margin: 0;/*
-  outline: rgba(255, 99, 71, 0.479) 5px solid;
-  outline-offset: -5px;*/
+  margin: 0;
 }
 
 .reasons__list {
@@ -28,21 +26,20 @@
   border-bottom: #d6d6d6 1px solid;
 
   @media (min-width: @tablet-width) {
-    width: 200px;
     border-bottom: none;
     padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
-.reasons__blue {
+.reasons__item--blue {
   background-color: @color-background-blue;
-  display: grid;
 
   @media (min-width: @tablet-width) {
     display: grid;

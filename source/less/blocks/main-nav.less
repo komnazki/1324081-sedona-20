@@ -1,41 +1,11 @@
 .main-nav {
-  width: auto;
+  width: 100%;
   margin: 0;
-  outline: tomato 2px solid;
-  outline-offset: -2px;
-}
-
-.main-nav__wrapper {
-  outline: rgb(0, 4, 255) 2px solid;
-  outline-offset: -2px;
-  width: 320px;
-  height: 55px;
-
-  @media (min-width: @mobile-width-only) {
-    position: relative;
-    top: -200px;
-    left: 0;
-    min-width: 320px;
-    min-height: 220px;
-    background-color: @color-background-blue;
-
-    @media (min-width: @mobile-width-only) {
-      display: none;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1200px;
-  }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
+  top: 206px;
   right: 0;
   z-index: 2;
   display: block;
@@ -50,10 +20,10 @@
   }
 }
 /*Сендвич*/
-.main-nav--closed .main-nav__toggle::before {
+.main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 17px;
   left: 17px;
   width: 23px;
   height: 4px;
@@ -76,7 +46,7 @@
     0 8px 0 0 fade(@color-background-blue, 30%),
     0 16px 0 0 fade(@color-background-blue, 30%);
 }
-
+/*
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
@@ -86,24 +56,25 @@
     }
   }
 }
-
+*/
 .main-nav--closed .site-list__item--activ a {
   padding-right: 70px;
   padding-left: 70px;
   text-align: center;
 }
-/*
-.main-nav--opened .main-nav__wrapper {
-  top: 0;
-  left: 0;
-  min-width: 320px;
-  min-height: 220px;
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav--opened .main-nav__list {
   background-color: @color-background-blue;
 }
 
 /*Тень на меню*/
-/*
-.main-nav--opened .main-nav__wrapper::before {
+.main-nav--opened .main-nav__list::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -116,7 +87,7 @@
     display: none;
   }
 }
-
+/*
 .main-nav--opened .main-nav__toggle {
   top: 0;
   right: 0;
@@ -152,18 +123,12 @@
   }
 }
 */
-.main-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
 }
 
-.main-nav--nojs .main-nav__wrapper {
+.main-nav--nojs .main-nav__list {
   position: relative;
   min-height: 0;
 }

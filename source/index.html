@@ -8,42 +8,40 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="/img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Sity of Sedona">
-      </a>
       <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
-                <a>Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="photo.html">Фото и видео</a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html">Форма отзыва</a>
-              </li>
-              <li class="site-list__item">
-                <a href="#">HTML Academy</a>
-              </li>
-            </ul>
-        </div>
-        <div class="page-header__welcome"></div>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
       </nav>
+      <div class="page-header__logo">
+        <a><img src="/img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Sity of Sedona"></a>
+      </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="page-header__welcome"></div>
     </header>
 
     <main class="page-main">
-      <div class="page-main__header">
+      <div class="page-main__header container">
         <h1 class="page-main__h1">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="page-main__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
       <section class="reasons">
         <ul class="reasons__list">
-          <li class="reasons__item reasons__blue">
-            <div>
+          <li class="reasons__item reasons__item--blue">
+            <div class="container">
               <h3 class="page-main__title page-main__title--white">Настоящий городок</h3>
               <p class="page-main__description page-main__description--white">— №1 —</p>
               <p class="page-main__description page-main__description--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -52,22 +50,22 @@
           </li>
           <li class="reasons__item">
             <ul class="realsity">
-              <li class="realsity__item realsity__item--housing">
+              <li class="realsity__item realsity__item--housing container">
                 <h3 class="realsity__title">Жилье</h3>
                 <p class="realsity__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
-              <li class="realsity__item realsity__item--souvenirs">
+              <li class="realsity__item realsity__item--souvenirs container">
                 <h3 class="realsity__title">Сувениры</h3>
                 <p class="realsity__description">Не только китайского, но и местного производства!</p>
               </li>
-              <li class="realsity__item realsity__item--food">
+              <li class="realsity__item realsity__item--food container">
                 <h3 class="realsity__title">Еда</h3>
                 <p class="realsity__description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
               </li>
             </ul>
           </li>
-          <li class="reasons__item reasons__blue">
-            <div>
+          <li class="reasons__item reasons__item--blue">
+            <div class="container">
               <h3 class="page-main__title page-main__title--white">Там есть мост дьявола</h3>
               <p class="page-main__description page-main__description--white">— №2 —</p>
               <p class="page-main__description page-main__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -96,7 +94,7 @@
         </ul>
       </section>
       <section class="searchhotel">
-        <div>
+        <div class="container">
           <h2 class="visually-hidden">Найти гостиницу</h2>
           <p class="searchhotel__title">Заинтересовались?</p>
           <p class="searchhotel__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
