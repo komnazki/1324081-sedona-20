@@ -2,10 +2,24 @@
   list-style: none;
   background-color: @color-background;
   padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+  }
 }
 
 .realsity__item {
-  padding: 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
 }
 
 .realsity__title {
@@ -14,6 +28,9 @@
   font-size: @font-size;
   line-height: 26px;
   text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
 .realsity__description {
@@ -22,6 +39,7 @@
   font-size: @font-size-min;
   line-height: 26px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 /*.realsity__item--housing {}
