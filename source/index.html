@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed  main-nav--nojs">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a>Главная</a>
@@ -70,9 +70,7 @@
               <p class="page-main__description page-main__description--white">— №2 —</p>
               <p class="page-main__description page-main__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <div class="reasons__img-devil">
-              <a alt="Арка между скал Мост дьявола"></a>
-            </div>
+            <div class="reasons__img-devil"></div>
           </li>
           <li class="reasons__item reasons__grey">
             <div class="reasons__item--grey">
@@ -94,16 +92,14 @@
         </ul>
       </section>
       <section class="searchhotel">
-        <div class="container">
-          <h2 class="visually-hidden">Найти гостиницу</h2>
-          <p class="searchhotel__title">Заинтересовались?</p>
-          <p class="searchhotel__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        </div>
-        <div class="searchhotel-button">
-          <a class="button" href="form.html">Найти гостиницу</a>
-        </div>
+        <h2 class="visually-hidden">Найти гостиницу</h2>
+        <p class="searchhotel__title container ">Заинтересовались?</p>
+        <p class="searchhotel__description container">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <div>
-          <img class="searchhotel__map" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта города Sedona">
+          <a class="button searchhotel-button" href="form.html">Найти гостиницу</a>
+        </div>
+        <div class="searchhotel__map">
+          <span class="visually-hidden">Карта города Sedona</span>
         </div>
       </section>
     </main>
