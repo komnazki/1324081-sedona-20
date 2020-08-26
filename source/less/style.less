@@ -13,10 +13,8 @@
 @import "blocks/social.less";
 @import "blocks/copyright.less";
 @import "blocks/photogallery.less";
-/*
-@import "blocks/review.less";
 @import "blocks/video.less";
-*/
+@import "blocks/review.less";
 
 *,
 *::before,
@@ -44,12 +42,13 @@ img {
 }
 
 .button {
+  display: inline-block;
+  height: 58px;
   color: @color-text-white;
   font-style: normal;
   font-weight: bold;
   font-size: @font-size-big;
   line-height: 26px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
