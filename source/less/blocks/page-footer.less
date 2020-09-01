@@ -1,15 +1,18 @@
 .page-footer {
-  margin-top: 30px;
-  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 240px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
+    align-self: center;
+    min-height: 120px;
   }
 }
 
 .page-footer__visitsedona {
+  align-self: center;
   color: @color-text;
   font-style: normal;
   font-weight: bold;
@@ -17,17 +20,24 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+
+  p {
+    margin: 0;
+  }
 }
 
 .page-footer__social {
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .social__list {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin: 0;
 }
 
 .social__item {
@@ -43,6 +53,6 @@
 }
 
 .page-footer__copyright {
+  align-self: center;
   text-align: center;
-  padding: 20px 0 20px 0;
 }

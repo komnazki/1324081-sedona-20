@@ -36,7 +36,7 @@
   background-position: center 0;
 
   @media (max-width: @mobile-width-only) {
-    margin-top: -28px;
+    margin-top: -31px;
   }
 
   @media (min-width: @tablet-width) {
@@ -55,5 +55,15 @@
     background-repeat: no-repeat;
     background-position: center 0;
     background-size: cover;
+  }
+
+  &--up {
+    height: 158px;
+    background-position: bottom;
+
+    @media (min-width: @tablet-width) {
+      background-position: bottom;
+      height: 290px;
+    }
   }
 }
