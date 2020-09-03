@@ -9,6 +9,14 @@
   font-size: @font-size-big;
   line-height: 26px;
   text-transform: uppercase;
+  overflow-wrap: manual;
+  margin-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-top: 58px;
+    margin-bottom: 34px;
+  }
 }
 
 .searchhotel__description {
@@ -16,19 +24,18 @@
   color: @color-text-grey;
   font-style: normal;
   font-size: @font-size-min;
-  line-height: 26px;
+  line-height: 24px;
   text-transform: uppercase;
   margin: auto;
 }
 
 .searchhotel-button {
-  width: 280px;
-  background-color: @color-background-blue;
-  margin: 20px 0 50px 0;
+  width: 87.5%;
+  margin: 28px 0 50px 0;
 
   @media (min-width: @tablet-width) {
     width: 458px;
-    margin-top: 30px;
+    margin: 38px 0 60px 0;
   }
 }
 

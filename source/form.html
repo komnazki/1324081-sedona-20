@@ -25,37 +25,37 @@
           </ul>
       </nav>
       <div class="page-header__logo">
-        <a><img src="/img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Sity of Sedona"></a>
+        <a href="index.html"><img src="/img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Sity of Sedona"></a>
       </div>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="page-header__welcome"></div>
+      <div class="page-header__welcome page-header__welcome--up"></div>
     </header>
 
     <main class="page-main">
-      <div class="page-main__header container">
+      <div class="page-main__header page-main__header--inside container">
         <h1 class="page-main__h1">Оставьте свой отзыв</h1>
-        <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностей</p>
+        <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримеча<wbr>тельностей</p>
       </div>
       <section class="review__wrapper review">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <form class="review__forms" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="review__item review__name">
             <legend class="review__title">Представьтесь:</legend>
-            <label for="username">Имя*</label>
-            <input type="text" id="username" name="username" placeholder="Петр" autocomplete="on" required>
-            <label for="familyname">Фамилия*</label>
-            <input type="text" id="familyname" name="username" placeholder="Иванов" autocomplete="on" required>
-            <label for="patronymic">Отчество</label>
-            <input type="text" id="patronymic" name="username" placeholder="Александрович" autocomplete="on">
+            <div><label for="username">Имя*</label>
+            <input type="text" id="username" name="username" placeholder="Петр" autocomplete="on" required></div>
+            <div><label for="familyname">Фамилия*</label>
+            <input type="text" id="familyname" name="username" placeholder="Иванов" autocomplete="on" required></div>
+            <div><label for="patronymic">Отчество</label>
+            <input type="text" id="patronymic" name="username" placeholder="Александрович" autocomplete="on"></div>
           </fieldset>
           <fieldset class="review__item review__contact">
             <legend class="review__title">Контактная информация:</legend>
-            <label for="phone">Контактный телефон*</label>
-            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
-            <label for="contact-email">Электронная почта*</label>
-            <input type="email" id="contact-email" name="email" placeholder="Введите email" required>
+            <p><label for="phone">Контактный телефон*</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required></p>
+            <p><label for="contact-email">Электронная почта*</label>
+            <input type="email" id="contact-email" name="email" placeholder="Введите email" required></p>
           </fieldset>
           <fieldset class="review__item review__impressions">
             <legend class="review__title">Ваше общее впечатление:</legend>

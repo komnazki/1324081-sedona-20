@@ -1,17 +1,32 @@
 .page-main__header {
-  max-width: 520px;
-  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  min-height: 220px;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    min-height: 206px;
+  }
+
+  &--inside {
+    max-width: 474px;
+  }
 }
 
 .page-main__h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: @font-size-big;
+  font-size: @font-size;
   line-height: 26px;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
+  margin: auto 10px 0 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-big;
+  }
 }
 
 .page-main__title {
@@ -22,23 +37,18 @@
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 40px;
-
-  &--white {
-    color: @color-text-white;
-  }
+  margin: 0;
+  padding-top: 25px;
 }
 
 .page-main__description {
   color: @color-text-grey;
   font-style: normal;
   font-size: @font-size-min;
-  line-height: 26px;
+  line-height: 21px;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-
-  &--white {
-    color: @color-text-white;
-  }
+  overflow-wrap: manual;
+  margin: 30px 10px auto 10px;
 }
