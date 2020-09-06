@@ -25,7 +25,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
 
@@ -103,18 +102,7 @@
 @media (min-width: @desktop-width) {
   .photogallery {
     min-width: 1200px;
-    padding: 0;
     margin: 0;
-  }
-
-  .photogallery__item {
-    border-bottom: none;
-    padding: 0;
-  }
-
-  .photogallery__image {
-    width: auto;
-    height: 267px;
   }
 
   .photogallery__caption {
@@ -155,9 +143,9 @@
   position: relative;
 
   &::before {
+    position: absolute;
     width: 23px;
     height: 21px;
     background-image: url("../img/icon-like.svg");
-    position: absolute;
   }
 }

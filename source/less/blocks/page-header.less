@@ -8,18 +8,16 @@
 }
 
 .page-header__logo {
+  text-align: center;
   z-index: 10;
 
   img {
     width: 102px;
     height: 84px;
-    margin: 0 auto;
   }
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    width: 102px;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,31 +28,36 @@
 .page-header__welcome {
   width: 100%;
   height: 389px;
+  text-align: center;
   background-color: @color-background-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+  padding-top: 90px;
+
+  img {
+    width: 282px;
+    height: auto;
+  }
 
   @media (max-width: @mobile-width-only) {
     margin-top: -31px;
   }
 
   @media (min-width: @tablet-width) {
-    width: 100%;
     height: 518px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 0;
     background-size: cover;
+    padding-top: 80px;
+
+    img {
+      width: 460px;
+      height: auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
-    height: 518px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 0;
-    background-size: cover;
   }
 
   &--up {
@@ -62,8 +65,18 @@
     background-position: bottom;
 
     @media (min-width: @tablet-width) {
-      background-position: bottom;
       height: 290px;
     }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 57px;
+    left: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='1200px' height='57px' viewBox='0 0 1200 57' enable-background='new 0 0 1200 57' xml:space='preserve'%3E%3Cg%3E%3Cpolygon fill='%23ffffff' points='250,24 0,0 0,57 250,57 600,57 250,0'/%3E%3Cpolygon fill='%23ffffff' points='951,24 951,0 600,57 951,57 1200,57 1200,0'/%3E%3C/g%3E%3C/svg%3E");
+    z-index: 10;
   }
 }

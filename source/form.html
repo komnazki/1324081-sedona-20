@@ -41,23 +41,33 @@
       <section class="review__wrapper review">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <form class="review__forms" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="review__item review__name">
+          <fieldset class="review__item review__item--name">
             <legend class="review__title">Представьтесь:</legend>
-            <div><label for="username">Имя*</label>
-            <input type="text" id="username" name="username" placeholder="Петр" autocomplete="on" required></div>
-            <div><label for="familyname">Фамилия*</label>
-            <input type="text" id="familyname" name="username" placeholder="Иванов" autocomplete="on" required></div>
-            <div><label for="patronymic">Отчество</label>
-            <input type="text" id="patronymic" name="username" placeholder="Александрович" autocomplete="on"></div>
+            <div>
+              <label for="username">Имя*</label>
+              <input type="text" id="username" name="username" placeholder="Петр" autocomplete="on" required>
+            </div>
+            <div>
+              <label for="familyname">Фамилия*</label>
+              <input type="text" id="familyname" name="username" placeholder="Иванов" autocomplete="on" required>
+            </div>
+            <div>
+              <label for="patronymic">Отчество</label>
+              <input type="text" id="patronymic" name="username" placeholder="Александрович" autocomplete="on">
+            </div>
           </fieldset>
-          <fieldset class="review__item review__contact">
+          <fieldset class="review__item review__item--contact">
             <legend class="review__title">Контактная информация:</legend>
-            <p><label for="phone">Контактный телефон*</label>
-            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required></p>
-            <p><label for="contact-email">Электронная почта*</label>
-            <input type="email" id="contact-email" name="email" placeholder="Введите email" required></p>
+            <div>
+              <label for="phone">Контактный телефон*</label>
+              <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+            </div>
+            <div>
+              <label for="contact-email">Электронная почта*</label>
+              <input type="email" id="contact-email" name="email" placeholder="Введите email" required>
+            </div>
           </fieldset>
-          <fieldset class="review__item review__impressions">
+          <fieldset class="review__item review__item--impressions">
             <legend class="review__title">Ваше общее впечатление:</legend>
               <input type="radio" name="impressions" value="positive" class="impressions__radio" id="yes" checked="">
               <label for="yes" tabindex="0">Скорее&nbsp;положительное</label>
@@ -66,18 +76,26 @@
               <input type="radio" name="impressions" value="zero" class="impressions__radio" id="zero">
               <label for="zero" tabindex="0">Затрудняюсь&nbsp;ответить</label>
           </fieldset>
-          <fieldset class="review__item review__showplace">
+          <fieldset class="review__item review__item--showplace">
             <legend class="review__title">Посещенные достопримечательности:</legend>
-            <input type="checkbox" name="showplace" id="devilsbridge" value="devilsbridge" class="showplace__input" checked="">
-            <label for="devilsbridge">Мост&nbsp;Дьявола</label>
-            <input type="checkbox" name="showplace" id="mountainbell" value="mountainbell" class="showplace__input" checked="">
-            <label for="mountainbell">Гора-Колокол</label>
-            <input type="checkbox" name="showplace" id="slidepark" value="slidepark" class="showplace__input" checked="">
-            <label for="slidepark">Слайд-парк</label>
-            <input type="checkbox" name="showplace" id="redrocks" value="redrocks" class="showplace__input">
-            <label for="redrocks">Красные&nbsp;скалы</label>
+            <div>
+              <input type="checkbox" name="showplace" id="devilsbridge" value="devilsbridge" class="showplace__input" checked="">
+              <label for="devilsbridge">Мост&nbsp;Дьявола</label>
+            </div>
+            <div>
+              <input type="checkbox" name="showplace" id="mountainbell" value="mountainbell" class="showplace__input" checked="">
+              <label for="mountainbell">Гора-Колокол</label>
+            </div>
+            <div>
+              <input type="checkbox" name="showplace" id="slidepark" value="slidepark" class="showplace__input" checked="">
+              <label for="slidepark">Слайд-парк</label>
+            </div>
+            <div>
+              <input type="checkbox" name="showplace" id="redrocks" value="redrocks" class="showplace__input">
+              <label for="redrocks">Красные&nbsp;скалы</label>
+            </div>
           </fieldset>
-          <fieldset class="review__item review__emotion">
+          <fieldset class="review__item review__item--motion">
             <legend class="review__title">Опишите свои эмоции:</legend>
             <label for="comment" class="visually-hidden">Оставьте комментарий в свободной форме</label>
             <textarea name="comment" id="comment" rows="4" placeholder="Опишите подробно все свои восторги" required></textarea>
