@@ -1,12 +1,11 @@
 .page-main__header {
-  display: flex;
-  flex-direction: column;
   max-width: 560px;
-  min-height: 220px;
+  min-height: 206px;
   margin: auto;
+  padding-top: 32px;
 
   @media (min-width: @tablet-width) {
-    min-height: 206px;
+    padding-top: 44px;
   }
 
   &--inside {
@@ -22,7 +21,7 @@
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  margin: auto 10px 0 10px;
+  margin: auto 10px 32px 10px;
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-big;
@@ -38,7 +37,8 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 25px;
+  padding: 0;
+  /*padding-top: 25px;*/
 }
 
 .page-main__description {
@@ -50,5 +50,11 @@
   text-align: center;
   text-transform: uppercase;
   overflow-wrap: manual;
-  margin: 30px 10px auto 10px;
+  margin: 0;
+  padding: 0;
+  /*margin: 16px 11px auto 11px;*/
+
+  &--up {
+    line-height: 26px;
+  }
 }
