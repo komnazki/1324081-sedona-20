@@ -5,12 +5,12 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 206px;
+  top: 205px;
   right: 0;
   z-index: 2;
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
   border: none;
   background-color: @color-background;
@@ -23,14 +23,14 @@
 .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 16px;
+  left: 12px;
   width: 23px;
   height: 4px;
   background-color: @color-background-blue;
   box-shadow:
-    0 8px 0 0 @color-background-blue,
-    0 16px 0 0 @color-background-blue;
+    0 9px 0 0 @color-background-blue,
+    0 18px 0 0 @color-background-blue;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
@@ -64,6 +64,7 @@
 }
 
 .main-nav__list {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;

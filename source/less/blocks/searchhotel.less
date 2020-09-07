@@ -27,11 +27,24 @@
   line-height: 24px;
   text-transform: uppercase;
   margin: auto;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 498px;
+
+    br {
+      display: block;
+    }
+  }
 }
 
 .searchhotel-button {
   width: 87.5%;
-  margin: 28px 0 50px 0;
+  padding-top: 15px;
+  margin: 29px 0 50px 0;
 
   @media (min-width: @tablet-width) {
     width: 458px;
