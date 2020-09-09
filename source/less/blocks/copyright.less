@@ -1,12 +1,25 @@
-/*.copyright {}*/
-
 .copyright__text {
   color: @color-text-grey;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: @font-size-min;
   line-height: 26px;
   text-transform: uppercase;
+  padding-right: 10px;
 }
 
-/*.copyright__link {}*/
+.copyright__link {
+  &:hover .copyright-logotype {
+    opacity: 1;
+    fill: #81b3d2;
+  }
+
+  &:focus .copyright-logotype {
+    opacity: 1;
+    fill: #81b3d2;
+  }
+
+  &:active .copyright__logotype {
+    opacity: 0.3;
+  }
+}
