@@ -7,7 +7,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 60px;
+
+  li:first-child {
+    border-top: #e5e5e5 1px solid;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -17,10 +20,6 @@
     li:first-child {
       grid-column-start: 1;
       grid-column-end: 3;
-
-      .photogallery__image {
-        height: 400px;
-      }
     }
   }
 
@@ -31,10 +30,6 @@
     li:first-child {
       grid-column-start: 1;
       grid-column-end: 4;
-
-      .photogallery__image {
-        height: 400px;
-      }
     }
   }
 }
@@ -49,29 +44,6 @@
   padding-top: 10px;
 }
 
-.photogallery__image {
-  height: 280px;
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
-
-  &--sunset {
-    background-image: url("../img/photo-sunset-desktop@1x.jpg");
-  }
-
-  &--cactus {
-    background-image: url("../img/photo-cactus-desktop@1x.jpg");
-  }
-
-  &--roads {
-    background-image: url("../img/photo-roads-desktop@1x.jpg");
-  }
-
-  &--bridge {
-    background-image: url("../img/photo-bridge-desktop@1x.jpg");
-  }
-}
-
 @media (min-width: @tablet-width) {
   .photogallery {
     max-width: 1080px;
@@ -82,11 +54,6 @@
   .photogallery__item {
     border-bottom: none;
     padding: 0;
-  }
-
-  .photogallery__image {
-    width: auto;
-    height: 267px;
   }
 
   .photogallery__caption {
@@ -113,12 +80,30 @@
   }
 }
 
+.photogallery__image {
+  &--sunset {
+    background-color: #c97842;
+  }
+
+  &--cactus {
+    background-color: #d9805c;
+  }
+
+  &--roads {
+    background-color: #799e68;
+  }
+
+  &--bridge {
+    background-color: #e0a37a;
+  }
+}
+
 .photogallery__title,
 .photogallery__like,
 .photogallery__author {
   color: @color-text;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: @font-size-min;
   line-height: 24px;
   text-transform: uppercase;
@@ -135,7 +120,7 @@
 }
 
 .photogallery__author {
-  font-weight: normal;
+  font-weight: 400;
   text-transform: none;
 }
 
