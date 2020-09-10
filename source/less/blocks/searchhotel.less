@@ -14,7 +14,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    margin-top: 58px;
+    margin-top: 56px;
     margin-bottom: 34px;
   }
 }
@@ -50,13 +50,24 @@
     width: 458px;
     margin: 38px 0 60px 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 42px 0 66px 0;
+  }
 }
 
 .searchhotel__map {
+  position: relative;
   height: 350px;
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
   background-color: #f4f2eb;
   background-image: url("../img/bg-map-desktop@1x.jpg");
+
+  iframe {
+    position: absolute;
+    top: 50%;
+    border: none;
+  }
 }

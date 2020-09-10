@@ -80,6 +80,13 @@
       height: auto;
     }
 
+    &--inside img {
+      position: absolute;
+      top: 94px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
@@ -91,6 +98,10 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
+
+    &--inside img {
+      top: 101px;
+    }
   }
 
   &--up {
@@ -99,6 +110,10 @@
 
     @media (min-width: @tablet-width) {
       height: 290px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 300px;
     }
   }
 

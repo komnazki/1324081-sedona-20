@@ -136,10 +136,6 @@
     }
   }
 
-  &--contact input {
-    width: 100%;
-  }
-
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding-left: 0;
@@ -178,24 +174,6 @@
     &--motion {
       grid-column-start: 1;
       grid-column-end: 3;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &--contact {
-      display: grid;
-      align-items: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-
-      input {
-        width: 215px;
-      }
-
-      div {
-        width: 50%;
-        border: lime 1px solid;
-      }
     }
   }
 }
@@ -281,52 +259,73 @@
   }
 }
 
-.showplace__input:hover + label::before,
-.showplace__input:focus + label::before {
-  background-color: #e5e5e5;
-  border: 5px solid #e5e5e5;
-}
+.contact-wrapper {
+  input {
+    width: 100%;
+  }
 
-.showplace__input:checked + label::before {
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 23px;
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
 
-  &:disabled {
-    opacity: 0.3;
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    input {
+      width: 315px;
+    }
   }
 }
 
-.showplace__input:disabled + label::before {
-  background-color: #d5d5d5;
-  border: 5px solid #d5d5d5;
-}
-
-.review__item--showplace {
-  label::before {
-    position: absolute;
-    content: "";
-    top: -14px;
-    left: 0;
-    width: 46px;
-    height: 46px;
-    background: #f2f2f2;
-    border: 5px solid #f2f2f2;
-  }
-
+.showplace-wrapper {
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    padding: 0 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     div {
       border: lime 1px solid;
+      width: 259px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    justify-content: space-between;
+
+    div {
+      width: auto;
+    }
+  }
+
+  label::before {
+    position: absolute;
+    content: "";
+    top: -19px;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    background: #f2f2f2;
+  }
+
+  input:hover + label::before,
+  input:focus + label::before {
+    background-color: #e5e5e5;
+  }
+
+  input:checked + label::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 23px;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  input:disabled + label::before {
+    background-color: #d5d5d5;
   }
 }
