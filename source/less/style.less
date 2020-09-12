@@ -58,4 +58,19 @@ img {
   cursor: pointer;
   outline: none;
   overflow: hidden;
+
+  &:hover,
+  &:focus {
+    background: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #5496bd;
+  }
+
+  &:disabled {
+    color: @color-text-white;
+    background: #e5e5e5;
+  }
 }

@@ -6,7 +6,7 @@
   @media (min-width: @tablet-width) {
     border: 0;
     padding: 0 8% 0 8%;
-    margin-top: 45px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -21,16 +21,18 @@
 
   input {
     height: 58px;
-    background-color: #f2f2f2;
+    font-size: @font-size;
     color: @color-text;
-    border: none;
+    background-color: #f2f2f2;
+    border: 4px #f2f2f2 solid;
     outline: none;
-    padding-left: 22px;
+    padding-left: 20px;
   }
 
   input:hover,
   input:focus {
     background-color: #e5e5e5;
+    border: 4px #e5e5e5 solid;
   }
 
   input:active {
@@ -44,11 +46,10 @@
   }
 
   label {
-    color: @color-text-grey;
     font-size: @font-size-min;
+    color: @color-text-grey;
     text-transform: uppercase;
-    margin-right: 17px;
-    line-height: 58px;
+    margin-right: 12px;
     outline: none;
   }
 
@@ -58,7 +59,7 @@
     background-color: #f2f2f2;
     color: @color-text;
     font-weight: 700;
-    border: none;
+    border: 4px #f2f2f2 solid;
     outline: none;
     padding: 14px 16px 14px 16px;
     margin-bottom: 20px;
@@ -113,10 +114,20 @@
 .review__item {
   border: none;
   border-bottom: #e5e5e5 1px solid;
-  padding: 6%;
+  padding: 0;
+  padding-left: 6%;
+  padding-right: 6%;
   margin: 0;
   margin-bottom: 20px;
-  /*border: brown 1px solid;*/
+
+  &--name {
+    padding-bottom: 0;
+  }
+
+  &--contact,
+  &--showplace {
+    padding-bottom: 30px;
+  }
 
   &--impressions,
   &--showplace {
@@ -127,6 +138,7 @@
     label {
       position: relative;
       color: @color-text;
+      font-size: @font-size;
       font-weight: 700;
       text-transform: inherit;
       cursor: pointer;
@@ -136,20 +148,22 @@
     }
   }
 
-  &--contact input {
-    width: 100%;
-  }
-
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 0;
+    margin-bottom: 50px;
+
+    &--contact,
+    &--showplace {
+      padding-bottom: 0;
+    }
 
     &--impressions {
       grid-column: 1;
       grid-row: 1;
       position: relative;
+      padding-right: 20px;
 
       ::before {
         content: "";
@@ -165,7 +179,7 @@
     &--name {
       grid-column: 2;
       grid-row: 1;
-      padding-left: 79px;
+      padding-left: 58px;
     }
 
     &--contact {
@@ -182,20 +196,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    &--contact {
-      display: grid;
-      align-items: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-
-      input {
-        width: 215px;
-      }
-
-      div {
-        width: 50%;
-        border: lime 1px solid;
-      }
+    &--name {
+      padding-left: 79px;
     }
   }
 }
@@ -204,10 +206,29 @@
   color: @color-text;
   font-style: normal;
   font-weight: 700;
-  font-size: @font-size-big;
+  font-size: @font-size;
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-big;
+    margin-bottom: 50px;
+  }
+}
+
+.review__item--contact {
+  label {
+    line-height: 46px;
+    padding-left: 20px;
+  }
+
+  .review__title {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .review__item--name .review__title {
@@ -222,15 +243,18 @@
   margin-bottom: 20px;
 
   label {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 40px;
+    line-height: 58px;
     max-width: 75px;
   }
 
   input {
-    flex-grow: 1;
-    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+.review__item--motion {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
   }
 }
 
@@ -240,7 +264,7 @@
   width: 48px;
   height: 48px;
   left: 0;
-  top: 5px;
+  top: -15px;
   border-radius: 50%;
   background-color: #f2f2f2;
   border: 5px solid #f2f2f2;
@@ -262,7 +286,7 @@
   position: absolute;
   content: "";
   left: 15px;
-  top: 20px;
+  top: 0;
   border: none;
   width: 18px;
   height: 18px;
@@ -281,52 +305,89 @@
   }
 }
 
-.showplace__input:hover + label::before,
-.showplace__input:focus + label::before {
-  background-color: #e5e5e5;
-  border: 5px solid #e5e5e5;
-}
+.contact-wrapper {
+  input {
+    width: 100%;
+  }
 
-.showplace__input:checked + label::before {
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 23px;
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
 
-  &:disabled {
-    opacity: 0.3;
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    input {
+      width: 315px;
+    }
   }
 }
 
-.showplace__input:disabled + label::before {
-  background-color: #d5d5d5;
-  border: 5px solid #d5d5d5;
+.impressions-wrapper {
+  div {
+    padding: 29px 0 29px 0;
+  }
 }
 
-.review__item--showplace {
-  label::before {
-    position: absolute;
-    content: "";
-    top: -14px;
-    left: 0;
-    width: 46px;
-    height: 46px;
-    background: #f2f2f2;
-    border: 5px solid #f2f2f2;
+.showplace-wrapper {
+  div {
+    padding: 22px 0 22px 0;
   }
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    padding: 0 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     div {
-      border: lime 1px solid;
+      width: 259px;
+      padding: 30px 0 30px 0;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    justify-content: space-between;
+
+    div {
+      width: auto;
+    }
+  }
+
+  label::before {
+    position: absolute;
+    content: "";
+    top: -19px;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    background: #f2f2f2;
+  }
+
+  input:hover + label::before,
+  input:focus + label::before {
+    background-color: #e5e5e5;
+  }
+
+  input:checked + label::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 23px;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  input:disabled + label::before {
+    background-color: #d5d5d5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-vanish {
+    display: none;
   }
 }
