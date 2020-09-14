@@ -609,7 +609,7 @@ template {
   padding-top: 32px;
 }
 .page-main__header--inside {
-  max-width: 474px;
+  max-width: 475px;
 }
 .page-main__header--height {
   min-height: 190px;
@@ -625,6 +625,9 @@ template {
 @media (min-width: 1200px) {
   .page-main__header {
     padding-top: 80px;
+  }
+  .page-main__header--index {
+    padding-top: 44px;
   }
   .page-main__header--height {
     min-height: 285px;
@@ -1803,10 +1806,12 @@ template {
 }
 .review__forms textarea::-moz-placeholder {
   color: #000000;
+  font-size: 18px;
   font-weight: 700;
 }
 .review__forms textarea::placeholder {
   color: #000000;
+  font-size: 18px;
   font-weight: 700;
 }
 .review__forms textarea:hover,
@@ -1837,14 +1842,6 @@ template {
     margin: 0;
     margin-top: 30px;
   }
-}
-.required-field {
-  position: absolute;
-  color: #333333;
-  font-size: 14px;
-  text-transform: uppercase;
-  bottom: 29px;
-  right: 0;
 }
 .review__item {
   border: none;
@@ -1957,6 +1954,16 @@ template {
     text-align: left;
   }
 }
+@media (min-width: 768px) {
+  .review__item--impressions .review__title {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .review__item--impressions .review__title {
+    text-align: center;
+  }
+}
 .review__item--name div {
   display: flex;
   flex-wrap: nowrap;
@@ -2042,6 +2049,7 @@ template {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 55px;
   }
   .showplace-wrapper div {
     width: 259px;
@@ -2051,6 +2059,7 @@ template {
 @media (min-width: 1200px) {
   .showplace-wrapper {
     justify-content: space-between;
+    padding: 0;
   }
   .showplace-wrapper div {
     width: auto;
@@ -2080,6 +2089,15 @@ template {
 }
 .showplace-wrapper input:disabled + label::before {
   background-color: #d5d5d5;
+}
+.required-field {
+  width: 45%;
+  position: absolute;
+  color: #333333;
+  font-size: 14px;
+  text-transform: uppercase;
+  bottom: 29px;
+  right: 0;
 }
 @media (min-width: 1200px) {
   .text-vanish {

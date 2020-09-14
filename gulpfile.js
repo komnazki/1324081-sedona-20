@@ -11,7 +11,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const htmlmin = require("gulp-htmlmin");
+const html = require("gulp-html");
 
 
 // Styles
@@ -33,6 +33,7 @@ const styles = () => {
 
 exports.styles = styles;
 
+
 // Server
 
 const server = (done) => {
@@ -47,6 +48,7 @@ const server = (done) => {
   done();
 }
 
+
 exports.server = server;
 
 // Watcher
@@ -59,6 +61,7 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
 
 // Images
 
@@ -74,6 +77,7 @@ const images = () => {
 
 exports.images = images;
 
+
 //Webp
 
 const createWebp = () => {
@@ -83,7 +87,6 @@ const createWebp = () => {
   }
 
 exports.webp = createWebp;
-
 
 
 // Copy
@@ -116,21 +119,22 @@ exports.sprite = sprite;
 
 // Clean
 
-  const clean = () => {
+const clean = () => {
     return del("build");
   };
 
   exports.clean = clean;
 
-// HTML min
+// HTML
 
-const htmlmin = () => {
-  return gulp.src("source/*.html")
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"));
+gulp.html = () => {
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
-exports.htmlmin = htmlsmall;
+exports.html = html;
 
 // Build
 
@@ -141,6 +145,6 @@ const build = gulp.series(
   "images",
   "createwWebp",
   "sprite",
-  "htmlmin");
+  "html");
 
 exports.build = build;
