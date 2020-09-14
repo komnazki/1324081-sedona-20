@@ -48,7 +48,6 @@ const server = (done) => {
   done();
 }
 
-
 exports.server = server;
 
 // Watcher
@@ -84,14 +83,14 @@ const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"))
-  }
+}
 
 exports.webp = createWebp;
 
 
 // Copy
 
- const copy = () => {
+const copy = () => {
   return gulp.src([
   "source/fonts/**/*.{woff,woff2}",
   "source/img/**",
@@ -102,7 +101,7 @@ exports.webp = createWebp;
   base: "source"
   })
   .pipe(gulp.dest("build"));
- };
+};
 
 exports.copy = copy;
 
@@ -120,10 +119,10 @@ exports.sprite = sprite;
 // Clean
 
 const clean = () => {
-    return del("build");
-  };
+  return del("build");
+};
 
-  exports.clean = clean;
+exports.clean = clean;
 
 // HTML
 
@@ -139,12 +138,12 @@ exports.html = html;
 // Build
 
 const build = gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "images",
-  "createwWebp",
-  "sprite",
-  "html");
+  clean,
+  copy,
+  styles,
+  images,
+  createWebp,
+  sprite,
+  html);
 
 exports.build = build;
