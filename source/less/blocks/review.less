@@ -114,6 +114,12 @@
 
   &--name {
     padding-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      .review__title {
+        text-align: left;
+      }
+    }
   }
 
   &--contact,
@@ -223,14 +229,6 @@
   }
 }
 
-.review__item--name {
-  @media (min-width: @tablet-width) {
-    .review__title {
-      text-align: left;
-    }
-  }
-}
-
 .review__item--impressions {
   @media (min-width: @tablet-width) {
     .review__title {
@@ -333,13 +331,53 @@
   }
 }
 
-.impressions-wrapper {
-  div {
-    padding: 29px 0 29px 0;
+.contact-phone,
+.contact-email {
+  position: relative;
+}
+
+.contact-phone label::before {
+  position: absolute;
+  content: "";
+  top: 46px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-image:  url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e6e6e6;
+  z-index: 90;
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    right: 58px;
   }
 }
 
-.showplace-wrapper {
+.contact-email label::before {
+  position: absolute;
+  content: "";
+  top: 46px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-image:  url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e6e6e6;
+  z-index: 90;
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
+}
+
+.impressions div {
+  padding: 29px 0 29px 0;
+}
+
+.showplace {
   div {
     padding: 22px 0 22px 0;
   }
@@ -402,6 +440,7 @@
   color: @color-text-grey;
   font-size: @font-size-min;
   text-transform: uppercase;
+  text-align: right;
   bottom: 29px;
   right: 0;
 }
