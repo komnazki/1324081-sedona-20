@@ -64,7 +64,7 @@ exports.default = gulp.series(
 // Images
 
 const images = () => {
-  return gulp.src(["source/img/**/*.{jpg,png,svg}", "!source/img/**/icon-*.svg"])
+  return gulp.src(["source/img/**/*.{jpg,png,svg}", "!source/img/**/icon-*.svg", "!source/img/sprite.svg"])
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.mozjpeg({progressive: true}),
