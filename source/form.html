@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Седона: оставить отзыв</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -42,7 +44,7 @@
     </header>
 
     <main class="page-main">
-      <div class="page-main__header page-main__header--inside page-main__header--height container">
+      <div class="page-main__header page-main__header--inside page-main__header--height page-main__header--form container">
         <h1 class="page-main__h1 page-main__h1--inside">Оставьте свой отзыв</h1>
         <p class="page-main__description page-main__description--inside">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримеча<wbr>тельностей</p>
       </div>
@@ -73,7 +75,7 @@
               </div>
               <div class="contact-email">
                 <label for="contact-email">Электронная почта*:</label>
-                <input type="email" id="contact-email" name="email" placeholder="Введите email" required>
+                <input type="email" id="contact-email" name="email" placeholder="Введите e-mail" required>
               </div>
           </div>
           </fieldset>
@@ -123,6 +125,24 @@
           <button class="review-button button" type="submit">Отправить отзыв</button>
           <span class="required-field">* — обязательные поля</span>
         </form>
+        <!--Форма Ошибка-->
+        <form class="review-error" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="review-error__text">
+            <h3 class="review__title">Что-то пошло не так!</h3>
+            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
+          </div>
+            <button class="review-error__button-close button" tabindex="0" aria-label="Да">Ok</button>
+        </form>
+        <!--Форма Отзыв отправлен-->
+        <form class="review-sent" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="review-sent__text">
+            <h3 class="review__title">Ваш отзыв отправлен!</h3>
+            <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          </div>
+          <div class="review-sent__button">
+            <button class="review-sent__button-close button" tabindex="0" aria-label="Закрыть">Закрыть окно</button>
+          </div>
+        </form>
       </section>
     </main>
 
@@ -135,19 +155,19 @@
         <ul class="social__list">
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-twitter" width="17.5px" height="14.5px" aria-label="Мы в Твиттере">
+              <svg class="social__link social__link--icon-twitter" width="18" height="18" aria-label="Мы в Твиттере">
                 <use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-facebook" width="9px" height="19px" aria-label="Мы в Фейсбуке">
+              <svg class="social__link social__link--icon-facebook" width="9" height="19" aria-label="Мы в Фейсбуке">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-youtube" width="20px" height="14px" aria-label="Мы в Ютубе">
+              <svg class="social__link social__link--icon-youtube" width="20" height="14" aria-label="Мы в Ютубе">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
             </a>
           </li>
@@ -156,7 +176,7 @@
       <div class="copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
-          <svg class="copyright__logotype" width="26.943px" height="34.09px" aria-label="Логотип HTML Academy">
+          <svg class="copyright__logotype" width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>

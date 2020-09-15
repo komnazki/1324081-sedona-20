@@ -57,7 +57,7 @@
   padding-top: 20px;
   margin: 0;
 
-  &--inside {
+  @media (min-width: @tablet-width) {
     font-size: @font-size-big;
   }
 }
@@ -73,11 +73,9 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    &--inside {
-      line-height: 22px;
-      padding-top: 20px;
-      padding-bottom: 8px;
-    }
+    line-height: 22px;
+    padding-top: 20px;
+    padding-bottom: 8px;
   }
 }
 

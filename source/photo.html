@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Седона: фото и видео</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -126,7 +128,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo--bridge-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                   <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@1x.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x" alt="Арка Мост Дьвола">
@@ -167,17 +169,21 @@
           <div class="videoplayer">
             <button type="button" class="videoplayer__button videoplayer__button--replay">
               <svg class="videoplayer__svg-replay">
-                <use xlink:href="#icon-video-replay"></use>
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
               </svg>
             </button>
             <button type="button" class="videoplayer__button videoplayer__button--subtitles">
               <svg class="videoplayer__svg-subtitles">
-                <use xlink:href="#icon-video-subtitles"></use>
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
               </svg>
             </button>
             <button type="button" class="videoplayer__button videoplayer__button--fullscreen">
               <svg class="videoplayer__svg-fullscreen">
-                <use xlink:href="#icon-video-fullscreen"></use>
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+              </svg>
+            </button>
+            <button type="button" class="videoplayer__button videoplayer__button--fullscreen">
+              <svg class="videoplayer__svg-volume">
               </svg>
             </button>
           </div>
@@ -196,20 +202,20 @@
         <ul class="social__list">
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-twitter" width="17.5px" height="14.5px" aria-label="Мы в Твиттере">
-                <use xlink:href="#icon-twitter"></use></svg>
+              <svg class="social__link social__link--icon-twitter" width="18" height="18" aria-label="Мы в Твиттере">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-facebook" width="9px" height="19px" aria-label="Мы в Фейсбуке">
-                <use xlink:href="#icon-facebook"></use></svg>
+              <svg class="social__link social__link--icon-facebook" width="9" height="19" aria-label="Мы в Фейсбуке">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#">
-              <svg class="social__link social__link--icon-youtube" width="20px" height="14px" aria-label="Мы в Ютубе">
-                <use xlink:href="#icon-youtube"></use></svg>
+              <svg class="social__link social__link--icon-youtube" width="20" height="14" aria-label="Мы в Ютубе">
+                <use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
@@ -217,7 +223,7 @@
       <div class="copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
-          <svg class="copyright__logotype" width="26.943px" height="34.09px" aria-label="Логотип HTML Academy">
+          <svg class="copyright__logotype" width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>

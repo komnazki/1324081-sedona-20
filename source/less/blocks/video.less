@@ -68,16 +68,20 @@
     top: 22px;
     left: 22px;
   }
+}
 
-  &::after {
-    content: "";
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    position: absolute;
-    left: 56px;
-    top: 17px;
+.videoplayer__svg-volume {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  left: 56px;
+  bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    left: 204px;
+    bottom: 40px;
   }
 }
 
