@@ -127,7 +127,7 @@
       text-transform: inherit;
       cursor: pointer;
       outline: none;
-      padding-left: 70px;
+      padding-left: 77px;
       margin-bottom: 20px;
     }
   }
@@ -213,6 +213,28 @@ fieldset legend {
   label {
     line-height: 46px;
     padding-left: 20px;
+
+    @media (min-width: @tablet-width) {
+      ::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: -35px;
+        width: 19%;
+        height: 1px;
+        background: #dbdbdb;
+      }
+
+      ::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: -35px;
+        width: 19%;
+        height: 1px;
+        background: #dbdbdb;
+      }
+    }
 
     @media (min-width: @desktop-width) {
       padding-left: 0;
@@ -303,7 +325,38 @@ fieldset legend {
 
 .review__item--motion {
   @media (min-width: @tablet-width) {
+    position: relative;
     margin-bottom: 10px;
+
+    ::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 10px;
+      width: 19%;
+      height: 1px;
+      background: #dbdbdb;
+    }
+
+    ::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 10px;
+      width: 19%;
+      height: 1px;
+      background: #dbdbdb;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    ::before {
+      width: 30%;
+    }
+
+    ::after {
+      width: 30%;
+    }
   }
 }
 
@@ -394,7 +447,7 @@ fieldset legend {
 
   @media (min-width: @desktop-width) {
     top: 0;
-    right: 58px;
+    right: 80px;
   }
 }
 
@@ -498,7 +551,7 @@ fieldset legend {
   }
 }
 
-.required-field {
+.review__required-field {
   width: 45%;
   position: absolute;
   color: @color-text-grey;

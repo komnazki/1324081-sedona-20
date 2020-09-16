@@ -1,6 +1,17 @@
 .photogallery {
-  max-width: 767px;
-  margin: 0;
+  width: 320px;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0;
+  }
 }
 
 .photogallery__list {
@@ -48,8 +59,6 @@
   line-height: 0;
   width: 100%;
   padding: 0;
-  height: 280px;
-  overflow: hidden;
 
   img {
     width: 100%;
@@ -73,12 +82,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photogallery {
-    max-width: 1080px;
-    padding: 0;
-    margin: 0 60px 0 60px;
-  }
-
   .photogallery__item {
     border-bottom: none;
     padding: 0;
@@ -95,11 +98,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .photogallery {
-    min-width: 1200px;
-    margin: 0;
-  }
-
   .photogallery__caption {
     position: absolute;
     width: 100%;
