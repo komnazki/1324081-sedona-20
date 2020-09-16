@@ -48,6 +48,8 @@
   line-height: 0;
   width: 100%;
   padding: 0;
+  height: 280px;
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -136,6 +138,24 @@
 .photogallery__like {
   position: relative;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-image: url("../img/ico-like.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+
+    @media (min-width: @desktop-width) {
+      opacity: 1;
+      filter: invert(1);
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-right: 0;
     padding-bottom: 10px;
@@ -152,22 +172,5 @@
 
   @media (min-width: @tablet-width) {
     text-align: left;
-  }
-}
-
-.photogallery__like-icon::before {
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 21px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/ico-like.svg");
-  background-repeat: no-repeat;
-  opacity: 0.3;
-
-  @media (min-width: @desktop-width) {
-    opacity: 1;
-    filter: invert(1);
   }
 }

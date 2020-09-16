@@ -68,12 +68,12 @@
           </fieldset>
           <fieldset class="review__item review__item--contact">
             <legend class="review__title">Контактная информация:</legend>
-            <div class="contact-wrapper">
-              <div class="contact-phone">
+            <div class="review__contact-wrapper">
+              <div class="review__contact-phone">
                 <label for="phone"><span class="text-vanish">Контактный </span>телефон*:</label>
                 <input type="tel" id="phone" name="phone" placeholder="Введите телефон" pattern="[0-9]{5,11}" required>
               </div>
-              <div class="contact-email">
+              <div class="review__contact-email">
                 <label for="contact-email">Электронная почта*:</label>
                 <input type="email" id="contact-email" name="email" placeholder="Введите e-mail" required>
               </div>
@@ -81,24 +81,24 @@
           </fieldset>
           <fieldset class="review__item review__item--impressions">
             <legend class="review__title">Ваше общее впечатление:</legend>
-            <div class="impressions">
+            <div class="review__impressions">
               <div>
-                <input class="impressions__radio visually-hidden" type="radio" name="impressions" value="positive" id="yes" checked="">
+                <input class="review__impressions-radio visually-hidden" type="radio" name="impressions" value="positive" id="yes" checked="">
                 <label for="yes" tabindex="0">Скорее&nbsp;положительное</label>
               </div>
               <div>
-                <input class="impressions__radio visually-hidden" type="radio" name="impressions" value="negative" id="no">
+                <input class="review__impressions-radio visually-hidden" type="radio" name="impressions" value="negative" id="no">
                 <label for="no" tabindex="0">Скорее&nbsp;отрицательное</label>
               </div>
               <div>
-                <input class="impressions__radio visually-hidden" type="radio" name="impressions" value="zero" id="zero">
+                <input class="review__impressions-radio visually-hidden" type="radio" name="impressions" value="zero" id="zero">
                 <label for="zero" tabindex="0">Затрудняюсь&nbsp;ответить</label>
               </div>
             </div>
           </fieldset>
           <fieldset class="review__item review__item--showplace">
             <legend class="review__title">Посещенные <br>достопримечательности:</legend>
-            <div class="showplace">
+            <div class="review__showplace">
               <div>
                 <input class="visually-hidden" type="checkbox" name="showplace" id="devilsbridge" value="devilsbridge" checked="">
                 <label for="devilsbridge">Мост&nbsp;Дьявола</label>
@@ -122,26 +122,8 @@
               <label for="comment" class="visually-hidden">Оставьте комментарий в свободной форме</label>
               <textarea name="comment" id="comment" rows="4" placeholder="Опишите подробно все свои восторги" required></textarea>
           </fieldset>
-          <button class="review-button button" type="submit">Отправить отзыв</button>
+          <button class="review__button button" type="submit">Отправить отзыв</button>
           <span class="required-field">* — обязательные поля</span>
-        </form>
-        <!--Форма Ошибка-->
-        <form class="review-error" action="https://echo.htmlacademy.ru/courses" method="post">
-          <div class="review-error__text">
-            <h3 class="review__title">Что-то пошло не так!</h3>
-            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
-          </div>
-            <button class="review-error__button-close button" tabindex="0" aria-label="Да">Ok</button>
-        </form>
-        <!--Форма Отзыв отправлен-->
-        <form class="review-sent" action="https://echo.htmlacademy.ru/courses" method="post">
-          <div class="review-sent__text">
-            <h3 class="review__title">Ваш отзыв отправлен!</h3>
-            <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-          </div>
-          <div class="review-sent__button">
-            <button class="review-sent__button-close button" tabindex="0" aria-label="Закрыть">Закрыть окно</button>
-          </div>
         </form>
       </section>
     </main>
@@ -182,5 +164,23 @@
         </a>
       </div>
     </footer>
+    <!-- Ошибка-->
+    <section class="review-error">
+      <div class="review-error__text">
+        <h3 class="review__title">Что-то пошло не так!</h3>
+        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
+      </div>
+        <button class="button" tabindex="0" aria-label="Да">Ok</button>
+    </section>
+    <!-- Отзыв отправлен-->
+    <section class="review-sent">
+      <div class="review-sent__text">
+        <h3 class="review__title">Ваш отзыв отправлен!</h3>
+        <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="review-sent__button">
+        <button class="button" tabindex="0" aria-label="Закрыть">Закрыть окно</button>
+      </div>
+    </section>
   </body>
 </html>
